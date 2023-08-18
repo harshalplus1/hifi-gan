@@ -111,7 +111,7 @@ class Generator(torch.nn.Module):
             x = xs / self.num_kernels
         x = F.leaky_relu(x)
         x = self.conv_post(x)
-        x = F.Hardtanh(x)
+        x = F.hardtanh(x)
 
         return x
 
